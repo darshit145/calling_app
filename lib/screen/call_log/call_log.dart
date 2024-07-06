@@ -10,6 +10,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart' ;
 import 'package:contacts_service/contacts_service.dart';
 
+import '../../call_incomming/call_incomming_demo.dart';
 import '../../component/widget/custom_call_button.dart';
 import '../../component/widget/custom_texts.dart';
 import '../../utility/custom_list_tile.dart';
@@ -132,6 +133,9 @@ class _CallLogScreenState extends State<CallLogScreen> {
         backgroundColor: Colors.transparent,
 
         actions: [
+          IconButton(onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => CallIncommingDemo(),));
+          }, icon: Icon(Icons.account_balance_sharp)),
           IconButton(onPressed: () async{
             Iterable<Contact> contactstrr = await ContactsService.getContacts();
            print(contactstrr.last.birthday);

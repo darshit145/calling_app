@@ -49,6 +49,7 @@ dependencies:
   image_picker: ^0.8.5+3
   direct_caller_sim_choice: ^1.0.1
   flutter_image_compress: ^2.3.0
+#  connectycube_flutter_call_kit: ^2.7.0
 
 
 dev_dependencies:
